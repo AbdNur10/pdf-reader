@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import PdfViewer from "./pdfViewer";
 
-function App() {
+const App = () => {
+  const pdfUrl =
+    "https://firebasestorage.googleapis.com/v0/b/sqauredcircle.appspot.com/o/images%2F1723720533899?alt=media&token=2d71c138-35c7-4490-bae6-2bb3f6f47f34";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>PDF Viewer</h1>
+      <PdfViewer pdfUrl={pdfUrl} />
     </div>
   );
-}
+};
 
 export default App;
